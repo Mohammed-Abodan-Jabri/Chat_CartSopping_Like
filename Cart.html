@@ -1,0 +1,124 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script src="jquery-3.7.1.min.js">
+    </script>
+    <!-- our project just needs Font Awesome Solid + Brands -->
+    <link href="./assets/vendors/fontawesome-free-6.4.2-web/css/fontawesome.css" rel="stylesheet">
+    <link href="./assets/vendors/fontawesome-free-6.4.2-web/css/brands.css" rel="stylesheet">
+    <link href="./assets/vendors/fontawesome-free-6.4.2-web/css/solid.css" rel="stylesheet">
+    <!-- -->
+    <style>
+        #container {
+            margin-top: 400px;
+            margin-left: 45%;
+            height: 50px;
+            width: 140px;
+            background-color: rgb(66, 101, 101);
+            border-radius: 5px;
+            color: white;
+            padding-top: 25px;
+            position: relative;
+            text-align: center;
+            font-size: 25px;
+
+        }
+        #container:hover{
+            cursor:default;
+        }
+        #span1 {
+            width: 25px;
+            height: 25px;
+            background-color: rgb(142, 196, 140);
+            border-radius: 100%;
+            color: white;
+            position: absolute;
+            top: -15px;
+            right: 0;
+            font-size: 20px;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            z-index: 1;
+
+        }
+        #span2 {
+            width: 25px;
+            height: 25px;
+            background-color: rgb(142, 196, 140);
+            border-radius: 100%;
+            color: white;
+            position: absolute;
+            top: -15px;
+            right: 0;
+            font-size: 20px;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+
+        }
+        #card-shop {
+            width: 80px;
+            height: 80px;
+            background-color: rgb(66, 101, 101);
+            position: absolute;
+            border-radius: 5px;
+            top: 20px;
+            right: 0;
+            font-size: 50px;
+            color: rgb(252, 255, 255);
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+
+        .move {
+            transform: translate(697px, -381px);
+
+            transition-duration: 2s;
+        }
+    </style>
+</head>
+
+<body>
+
+    <div id="container">
+        Add Card
+        <span id="span1">1</span>
+    </div>
+    <div id="card-shop">
+        <i class="fa fas fa-shopping-cart"></i>
+        <span id="span2">0</span>
+    </div>
+    <script>
+        $(document).ready(function () {
+
+            $('#container').click(function () {
+                // $('#span1').css({
+                //     transition: '1s',
+                //     transform: 'translate(680px ,-380px )',
+                // });
+                $('#span1').addClass('move');
+
+                setTimeout(function () {
+                    let x = parseInt($('#span2').html());
+                    x++;
+                    let y = x.toString();
+                    console.log(y)
+                    $('#span2').html(y);
+                    $('#span1').removeClass('move');
+
+                }, 2000)
+            })
+
+
+
+        })
+    </script>
+</body>
+
+</html>

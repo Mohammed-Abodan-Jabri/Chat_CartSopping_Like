@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+   <meta charset="UTF-8">
+   <meta name="viewport" content="width=device-width, initial-scale=1.0">
+   <title>Chat</title>
+   <script src="jquery-3.7.1.min.js">
+   </script>
+   <!-- our project just needs Font Awesome Solid + Brands -->
+   <link href="./assets/vendors/fontawesome-free-6.4.2-web/css/fontawesome.css" rel="stylesheet">
+   <link href="./assets/vendors/fontawesome-free-6.4.2-web/css/brands.css" rel="stylesheet">
+   <link href="./assets/vendors/fontawesome-free-6.4.2-web/css/solid.css" rel="stylesheet">
+   <link href="./assets/css/main.css" rel="stylesheet">
+   <!-- -->
+   <style>
+ 
+   </style>
+</head>
+<body>
+   <div class="card1">
+      <header>
+         <img src="./assets/images/profile.jpg">
+         <div>
+            <p>Mohammed Ameen</p>
+            <p>Online</p>
+         </div>
+         <i id="xx" class="fa-solid fa-x"></i>
+      </header>
+      <main>
+         <div class="right">Hey</div>
+         <div class="left">welcom</div>
+         <div class="right">How are you?</div>
+         <div class="left">I am fine, and you?</div>
+         <div class="right">Dolore aspernatur expedita officia, suscipit tempore dignissimos velit totam iusto ab?
+            Nostrum, voluptatibus.</div>
+         <div class="left"> Dolor sequi minus commodi, dolorem at ratione eligendi! Repudiandae, natus.</div>
+      </main>
+      <footer>
+         <span>📷</span>
+         <span> 🙂</span>
+         <input type="text" placeholder="type your message">
+         <span>🎙</span>
+      </footer>
+
+
+   </div>
+   <span id="chat"> <i class="fa-solid fa-message"></i></span>
+
+   <script>
+      $(document).ready(function () {
+
+        
+         $('#chat').click(function(){
+            $('.card1').addClass('appare')
+            console.log("yyyyyyyyyyyyyyy")
+            $('#chat').css({
+               opacity:0,
+            })
+         });
+         $('#xx').click(function(){
+            $('.card1').removeClass('appare')
+            $('#chat').css({
+               opacity:1,
+            })
+         });
+      })
+
+   </script>
+</body>
+
+</html>
